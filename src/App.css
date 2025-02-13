@@ -1,0 +1,173 @@
+:root {
+  --transition-speed: 0.3s;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  transition: background-color var(--transition-speed) ease,
+            color var(--transition-speed) ease,
+            border-color var(--transition-speed) ease;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 16px;
+  width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  transition: all var(--transition-speed) ease;
+}
+
+.layout-container {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  transition: all var(--transition-speed) ease;
+}
+
+.layout-container.logged-in {
+  margin-top: 64px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  margin-top: 2.5rem;
+  transition: all var(--transition-speed) ease;
+  min-height: calc(100vh - 64px);
+  background-color: var(--background-color);
+} 
+
+.main-content.full-width {
+  margin-left: 0;
+} 
+
+
+
+
+/* th {
+  background-color: var(--tableHeader-color);
+  color: var(--text-color);
+  font-weight: 600;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 2px solid var(--tableBorder-color);
+  font-size: 1.25rem;
+} */
+
+
+
+
+
+/* Link Styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1.25rem;
+}
+
+a:hover {
+  color: var(--secondary-color);
+} 
+
+/* Button Styles */
+ button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: white;
+  transition: all 0.2s ease;
+} 
+
+ /* button:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+  transform: translateY(-1px);
+} */
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+} 
+
+/* Status Badge Styles */
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+
+.status-badge.running {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.status-badge.stopping {
+  background-color: var(--warning-color);
+  color: white;
+} 
+
+/* Table specific styles */
+ .part-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.25rem;
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+
+.part-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(4px);
+}
+
+.production-table th,
+.production-table td {
+  padding: 1.25rem;
+  font-size: 1.25rem;
+} */
+
+/* Progress bar styles */
+
+
+.progress-bar-wrapper {
+  flex-grow: 1;
+  width: 50px;
+  height: 12px;
+  background: var(--background-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+
+
+
+/* Responsive Design */
+ @media (max-width: 1024px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    
+  }
+
+  
+} 

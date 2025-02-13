@@ -1,0 +1,156 @@
+
+.Form-container{
+    margin-top: 5vh;
+    padding:  0 5rem;
+   
+  
+}
+.Form-Area {
+    border: 3px solid #00B4DB;
+    border-radius: 20px;
+    padding: 1rem;
+    background: white;
+
+}
+.Form-Area.dark{
+  border: 3px solid #1a1a1a;
+}
+
+.layout-2col{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    
+    
+}
+.topic-text{
+ 
+  padding: 0.25rem 0;
+  border-radius: 5px;
+}
+.box-border{
+  border: 1px solid  #dee2e6;
+  padding: 0 0.5rem;
+  padding-bottom: 2rem;
+  border-radius: 10px;
+}
+.header-form{
+ 
+  border-radius: 5px;
+  
+  margin-bottom: 0.5rem;
+}
+ .btn-box{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+ }
+.label-stye{
+    
+    font-size: 1.25rem;
+    font-weight: 400;
+    width: 25%;
+    text-align: center;
+}
+.form-split>input{
+ height:  100%;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+   
+    gap: 10px;
+    max-width: 600px;
+    justify-content: center;
+  }
+  
+  .image-box {
+    position: relative;
+    width: 140px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 2px dashed #cccccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .image-box:hover {
+    transform: scale(1.05);
+    border-color: #007bff;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .upload-icon {
+    font-size: 24px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .uploaded-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .upload-input {
+    display: none;
+  }
+  .singnature{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+
+  }
+  .singnature-text{
+    text-align: center;
+    border: 1px solid #dee2e6;
+    margin-bottom: 0;
+  }
+ .singnature-box{
+  flex: 1;
+ }
+ .Success-alert{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .Success-alert p{
+  font-size: 3rem;
+  color: rgb(3, 194, 130);
+ }
+ @media screen and (max-width:821px) {
+  .layout-2col{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Form-container{
+    padding: 0 1rem;
+  } 
+ }
+ @media screen and (max-width:500px) {
+ 
+  .Form-container{
+    padding: 0 0.5rem;
+  } 
+  .label-stye{
+    font-size: 1rem;
+  }
+ }

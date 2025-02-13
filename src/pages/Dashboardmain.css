@@ -1,0 +1,365 @@
+
+:root {
+  --backgroundDashboard-color: #0083B0  ;
+  --textDashboard-color: #000000;
+  --boxDashboard-shadow: none;
+  --linerDash-color:linear-gradient(to bottom, #e5e7eb, #e5e7eb);
+  --border: 2px solid #0083B0  ;
+  
+} 
+[data-theme="dark"] {
+  --backgroundDashboard-color:  #1f2937;
+   --textDashboard-color: #E5E7EB;
+   --boxDashboard-shadow: 5px 3px 5px  #151a22;
+   --linerDash-color:linear-gradient(to bottom, #131922, #3d3f43);
+   --border:none;
+}
+
+
+
+  .dashboard-container {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+
+  }
+  
+
+  .header {
+    
+    background-color: var(--backgroundDashboard-color);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 0;
+   
+    
+  }
+   .time-card {
+    
+  color:#E5E7EB;
+  
+  
+    
+  }
+  
+  .donut-charts {
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: var(--backgroundDashboard-color);
+    padding: 10px;
+    border-radius: 10px;
+   
+  }
+  
+  .donut-chart {
+    background: var(--linerDash-color);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow:var(--boxDashboard-shadow);
+    color: var(--textDashboard-color);
+  }
+  .donut-chart-desc{
+    margin: 1.2rem 1rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(60px);
+    
+    border:var(--border);
+   
+  }
+  .line-chart,
+  .bar-chart,.profit  {
+    background-color: var(--backgroundDashboard-color);
+    padding: 20px;
+    border-radius: 10px;
+    height: 18rem;
+   
+  
+  }
+
+  .bar-chart-profit{
+    display: flex;
+    gap: 10px;
+  
+  
+    width: 100%;
+  }
+.bar-chart,.profit{
+  width: 50%;
+}
+.profit{
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.profit-box{
+  width: 45%;
+  height: 125px;
+  flex-shrink: 1;
+  border-radius: 20px;
+  padding: 20px 15px;
+  color: #E5E7EB;
+  position: relative; /* รองรับ pseudo-element */
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.profit-box h3{
+  font-size: 1.5rem;
+}
+.purple {
+  background: linear-gradient(-45deg, rgba(135,0,251,1) 0%, rgba(176,0,251,1) 56%, rgba(241,0,251,1) 100%);
+}
+
+.blue {
+  background: linear-gradient(-45deg, rgba(89,42,215,1) 0%, rgb(35, 138, 255) 56%, rgb(2, 182, 223) 100%);
+}
+
+.profit-box::before,
+.profit-box::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+ 
+   filter: blur(1px);/* ทำให้วงกลมดูเบลอ */
+  }
+.profit-box :hover{
+  cursor: pointer;
+
+}
+
+.profit-box::before {
+  width: 150px;
+  height: 150px;
+  top: -15px;
+  left: -15px;
+}
+
+.profit-box::after {
+  width: 75px;
+  height: 75px;
+  bottom: -15px;
+  right: -5px;
+}
+.profit-box span.circle{
+ 
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.13);
+ 
+   filter: blur(1px);/* ทำให้วงกลมดูเบลอ */
+   animation: pulse 6s infinite normal ease-in-out ;
+}
+.profit-box span.circle.c1 {
+  width: 100px;
+  height: 100px;
+  top: 0;
+  right: 15px;
+}
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .pagination button {
+    background-color: #374151;
+    border: none;
+    color: #e5e7eb;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #3b82f6;
+    color: #ffffff;
+  }
+  /* h4{
+    color: #ffffff;
+  } */
+  .donut-chart-chart{
+    position: relative;
+    
+  }
+  .percent{
+    position: absolute;
+    
+    
+  }
+  li.li-dash{
+    list-style: none;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #374151;
+    font-size: 1rem;
+  }
+  .upper{
+    display: flex;
+    justify-content: space-around;
+  }
+  .status{
+    text-align: end;
+    margin: auto 0;
+  }
+.text-precent{
+  margin-bottom: 0.5rem;
+  word-wrap: break-word; /* หรือใช้ overflow-wrap */
+  overflow-wrap: break-word;
+}
+.donut-chart h5{
+  position: relative;
+  
+}
+.warningbtn{
+  
+  position: absolute;
+  right: 10px;
+  top: 0;
+  padding: 0;
+ 
+}
+.warningbtnInfo{
+  padding: 0;
+  font-size: 1.75rem;
+  position: relative;
+  animation: warningBlink 1s infinite;
+}
+
+.waring-desc{
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  font-size: 1rem;
+  
+  background-color: #000000bf;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 1000;
+  min-width: 200px;
+  opacity: 0;
+}
+.warningbtnInfo.open .waring-desc{
+ opacity: 1;
+}
+.warning-icon{
+  animation:iconBlink 1.5s infinite ;
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--background-color); /* Adjust for dark/light mode as needed */
+}
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--background-color); /* Adjust for dark/light mode as needed */
+  color: #E53E3E
+}
+.error-text{
+  color: #E53E3E;
+  text-align: center;
+}
+.spinner {
+  font-size: 2rem;
+  color: #007bff; /* Blue spinner */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-container p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+@keyframes iconBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+  @media (max-width: 768px) { /* จอเล็กลงไป */
+    .bar-chart-profit {
+      flex-direction: column; /* 1 คอลัมน์ */
+    }
+    .bar-chart,.profit{
+      width: 100%;
+    }
+   
+  }
+  @media  (min-width:835px) and (max-width: 1024px) { /* จอเล็กลงไป */
+    .profit-box h3{
+     font-size: 1.2rem;
+    }
+    .profit-box h6{
+      font-size: 1rem;
+     }
+    
+   
+  }
+  @media   (max-width: 834px) { /* จอเล็กลงไป */
+    .profit-box h3{
+     font-size: 1rem;
+    }
+    .profit-box h6{
+      font-size: 0.75rem;
+  
+     }
+    
+   
+  }
+
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.1;
+    }
+  }
