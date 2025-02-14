@@ -22,7 +22,7 @@ export const DataContext = createContext();
      
      
   
-      const socket = io("ec2-3-91-233-159.compute-1.amazonaws.com",{query: { token:Token  } ,
+      const socket = io("ec2-54-236-179-184.compute-1.amazonaws.com",{query: { token:Token  } ,
        } )
       // เมื่อเชื่อมต่อสำเร็จ
       socket.on("connect", () => {
