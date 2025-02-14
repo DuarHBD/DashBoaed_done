@@ -57,7 +57,7 @@ const Formcomponent = ({ darkMode }) => {
       // if (!Token) {
       //   throw new Error("Token not found. Please log in first.");
       // }
-        const response = await axios.post("http://127.0.0.1:5000/submit", dataToSend, {
+        const response = await axios.post("http://ec2-54-236-179-184.compute-1.amazonaws.com/api/submit", dataToSend, {
           headers: { "Content-Type": "application/json"
             
            },withCredentials:true
