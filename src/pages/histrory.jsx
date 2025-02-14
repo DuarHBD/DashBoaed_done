@@ -179,7 +179,7 @@ const fetchData = async () => {
     
    
     
-    const response = await axios.get("http://ec2-3-91-233-159.compute-1.amazonaws.com/api/get-record", {
+    const response = await axios.get("http://ec2-54-236-179-184.compute-1.amazonaws.com/api/get-record", {
       headers: {
         
         'Content-Type': 'application/json'
@@ -211,7 +211,7 @@ const confirmDelete =  async() => {
   setLoading(true) 
   try{
     
-    const response = await axios.post('http://ec2-3-91-233-159.compute-1.amazonaws.com/api/get-record',showDeleteConfirm, {
+    const response = await axios.post('http://ec2-54-236-179-184.compute-1.amazonaws.com/api/get-record',showDeleteConfirm, {
     headers: { "Content-Type": "application/json" ,
                
     },withCredentials:true
