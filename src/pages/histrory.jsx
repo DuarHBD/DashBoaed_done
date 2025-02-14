@@ -211,7 +211,7 @@ const confirmDelete =  async() => {
   setLoading(true) 
   try{
     
-    const response = await axios.post(' https://ec2-3-91-233-159.compute-1.amazonaws.com/api/get-record',showDeleteConfirm, {
+    const response = await axios.post('http://ec2-3-91-233-159.compute-1.amazonaws.com/api/get-record',showDeleteConfirm, {
     headers: { "Content-Type": "application/json" ,
                
     },withCredentials:true
