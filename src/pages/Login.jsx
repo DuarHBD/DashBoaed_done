@@ -43,7 +43,7 @@ const Login = ({ setIsLoggedIn }) => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-      const response = await axios.post("https//ec2-3-91-233-159.compute-1.amazonaws.com/api/login",credentials,{
+      const response = await axios.post("https://ec2-3-91-233-159.compute-1.amazonaws.com/api/login",credentials,{
         headers: { "Content-Type": "application/json" },withCredentials:true})
         console.log(response.data.msg)
      
