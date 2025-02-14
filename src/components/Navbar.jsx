@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, toggleDarkMode, setIsLoggedIn }) => {
    
     
       try {
-         const resp=await axios.post("https://ec2-3-91-233-159.compute-1.amazonaws.com/api/logout", {}, { withCredentials: true });
+         const resp=await axios.post("http://ec2-54-236-179-184.compute-1.amazonaws.com/api/logout", {}, { withCredentials: true });
         console.log(resp.data);
     
        
